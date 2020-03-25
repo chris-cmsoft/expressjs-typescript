@@ -1,10 +1,12 @@
 'use strict';
-import { DataTypes } from "sequelize";
+const sequelize = require('sequelize');
+const dbClient = require('../database/connection');
 
-
-const Library = sequelize.define('Library', {
-    name: DataTypes.STRING,
+const Library = dbClient.define('Library', {
+    name: sequelize.DataTypes.STRING,
 }, {});
+
+console.log(Library)
 
 module.exports = {
     Library,
