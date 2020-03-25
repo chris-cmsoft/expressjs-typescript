@@ -21,6 +21,6 @@ app.post('/libraries', async (request, response) => {
         name,
     });
     return response.json(library);
-});g
+});
 
 module.exports = app;
